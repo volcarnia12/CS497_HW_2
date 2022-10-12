@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import CommentCreate from './CommentCreate';
 import CommentList from './CommentList';
+//import CommentVote from './CommentVote';
 
 const PostList = () => {
   const [posts, setPosts] = useState({});

@@ -28,7 +28,7 @@ app.post('/posts/:id/comments', async (req, res) => {
     data: {
       id,
       content,
-      postId: req.params.id,
+      postId: req.params.id, 
     },
   });
 
