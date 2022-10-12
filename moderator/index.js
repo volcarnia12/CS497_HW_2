@@ -26,7 +26,7 @@ app.post('/events', async (req, res) => {
       let eligibility = 'ACCEPTED';
       for (let x = 0; x < censoredWords.length; ++x){
           let word = censoredWords[x];
-          if (data.content.includes(word)){
+          if (data.content.toLowerCase().includes(word)){
               eligibility = 'REJECTED';
               break;
           }
