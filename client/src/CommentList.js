@@ -8,8 +8,8 @@ const CommentList = ({ comments }) => {
         id: comment.id,
         postId: comment.postId,
         voteType: 1
-    });
-  }
+    }).catch((err) => { console.log(err.message); })
+  };
 
   async function downVote(comment){
     window.location.reload();
@@ -17,7 +17,7 @@ const CommentList = ({ comments }) => {
         id: comment.id,
         postId: comment.postId,
         voteType: 0
-    });
+    }).catch((err) => { console.log(err.message);});
   }
 
   const renderedComments = comments.map((comment) => {

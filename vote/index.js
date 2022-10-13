@@ -29,7 +29,7 @@ app.post('/posts/votes', async (req, res) => {
         postId,
         voteType
       },
-    });
+    }).catch((err) => { console.log(err.message);});;
   
     res.status(201).send(comments[id]);
   });

@@ -39,7 +39,7 @@ app.post('/events', async (req, res) => {
         postId: data.postId, 
         status: eligibility
       },
-    });
+    }).catch((err) => { console.log(err.message);});;
       //const post = posts[postId];
       //post.comments.push({ id, content });
     }
